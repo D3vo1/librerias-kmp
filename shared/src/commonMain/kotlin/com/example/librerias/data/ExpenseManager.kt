@@ -31,4 +31,10 @@ object ExpenseManager{
             ExpenseCategory.HOUSE
         )
     }
+    fun deleteExpense(expense: Expense){
+        val index = fakeExpenseList.indexOfFirst { it.id == expense.id }
+        fakeExpenseList.removeAt(index)
+//        fakeExpenseList.removeAll { it.id == expense.id }
+    }
 }
+
